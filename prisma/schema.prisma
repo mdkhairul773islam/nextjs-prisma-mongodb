@@ -25,3 +25,9 @@ type Address {
   state   String
   country String
 }
+
+model Post {
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  description String
+}
