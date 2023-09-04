@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import React from "react";
 
@@ -14,17 +15,17 @@ async function getData(path) {
   return res.json();
 }
 
-const page = async () => {
+const PostDetail = async () => {
   const pathname = usePathname();
   const post = await getData(pathname);
 
   return (
     <div className="bg-white border mx-auto max-w-3xl p-10 my-10">
-      <img src="/vercel.svg" className="w-full h-auto" alt={post.post} />
+      <Image height={100} width={100} src="/vercel.svg" className="w-full h-auto" alt={post.post} />
       <h3 className="text-3xl my-8">{post.title}</h3>
       <p className="text-xl">{post.description}</p>
     </div>
   );
 };
 
-export default page;
+export default PostDetail;

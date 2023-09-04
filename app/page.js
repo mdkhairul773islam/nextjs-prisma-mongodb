@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 async function getData() {
@@ -19,9 +20,9 @@ async function Home() {
     <div className="container mx-auto px-4 my-10">
       <div className="grid grid-cols-3 gap-8">
         {posts?.map((item) => (
-          <div className=" bg-white border border-gray-200 rounded-sm shadow ">
+          <div key={item.id} className=" bg-white border border-gray-200 rounded-sm shadow ">
             <Link href={`/posts/${item.id}`}>
-              <img className="bg-gray-500" src="vercel.svg" alt={item.title} />
+              <Image height={100} width={100} className="bg-gray-500 w-full h-auto" src="vercel.svg" alt={item.title} />
             </Link>
             <div className="p-5">
               <Link href={`/posts/${item.id}`}>

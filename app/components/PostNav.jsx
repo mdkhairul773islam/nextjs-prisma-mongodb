@@ -1,3 +1,5 @@
+
+import Link from "next/link";
 function BlogPostNavigation({ postId, allPosts }) {
   const currentIndex = allPosts.findIndex((post) => post.id === postId);
 
