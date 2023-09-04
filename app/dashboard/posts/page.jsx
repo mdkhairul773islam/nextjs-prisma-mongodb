@@ -2,6 +2,7 @@
 import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 async function getData() {
   const res = await fetch("http://localhost:3000/api/posts", {
@@ -15,7 +16,7 @@ async function getData() {
   return res.json();
 }
 
-const page = async () => {
+const Page = async () => {
   const router = useRouter();
   const posts = await getData();
 
@@ -59,7 +60,7 @@ const page = async () => {
             {posts?.map((post) => (
               <tr key={post.id} className="bg-white border-b  ">
                 <td className="px-6 py-4 ">
-                  <img src="/vercel.svg" alt="" />
+                  <Image height={100} width={100} className="h-full w-full" src="/vercel.svg" alt="" />
                 </td>
                 <th
                   scope="row"
@@ -95,4 +96,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default Page;
