@@ -7,16 +7,16 @@ const Footer = () => {
         <div className="md:flex md:items-center md:justify-between ">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2022{" "}
-            <a
+            {/*  <a
               href="https://flowbite.com"
               className="hover:underline"
               target="_blank"
             >
               Flowbite™
-            </a>
+            </a> */}
             . All Rights Reserved.
           </span>
-          <ul className="flex flex-wrap items-center mt-3 sm:mt-0">
+          {/* <ul className="flex flex-wrap items-center mt-3 sm:mt-0">
             <li>
               <a
                 href="#"
@@ -49,7 +49,7 @@ const Footer = () => {
                 Contact
               </a>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </div>
     </footer>
